@@ -25,11 +25,13 @@ function QuitarContacto(contacto, lista) {
     let indice = lista.indexOf(contacto);
     if (indice !== -1){
         lista.splice(indice, 1);
-        console.log("El contacto ${contacto} ha sido eliminado.");
+        console.log("El contacto " + contacto + " ha sido eliminado.");
     } else {
-        console.log("El contacto ${contacto} no existe en la lista.")
+        console.log("El contacto " + contacto + " no existe en la lista.")
     }
 }
+
+QuitarContacto("Jose Uriel", ListaDeContactos)
 
 QuitarContacto("David Gonzales", ListaDeContactos)
 
