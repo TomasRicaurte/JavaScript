@@ -1,39 +1,39 @@
-let ListaDeContactos = [
-    "Fabian Obando",
-    "Juan Cantillo",
-    "Laura Sanchez",
-    "David Gonzales",
-    "Camila Quintero",
-    "Claudia Velazco",
-    "Nicolas Zuluaga",
-    "Jose Ricaurte",
-    "Ruben Ricaurte",
-    "Florinda Ososrio",
-    "Fanny Rodriguez"
-];
+// Objeto Lista de contactos
+
+let ListaDeContactos = [];
 
 // Funcion para agregar un elemento a la lista
 
-function AgregarContacto(contacto, lista) {
-    lista.push(contacto);
+function AgregarContacto(id, nombres, apellidos, telefono, ubicacion) {
+    let NuevoContacto = {
+        id: id,
+        nombres: nombres,
+        apellidos: apellidos,
+        telefono: telefono,
+        ubicacion: ubicacion,
+    };
+
+    ListaDeContactos.push(NuevoContacto);
+    return NuevoContacto;
 }
-AgregarContacto("Elena Manrique", ListaDeContactos)
 
 // Funcion para eliminar un contacto de la lista
 
-function QuitarContacto(contacto, lista) {
-    let indice = lista.indexOf(contacto);
+function QuitarContacto(id) {
+    let indice = ListaDeContactos.findIndex(contacto => contacto.id === id);
+    
     if (indice !== -1){
-        lista.splice(indice, 1);
-        console.log("El contacto " + contacto + " ha sido eliminado.");
+        let ContactoEliminado = ListaDeContactos.splice(indice, 1)
+        return ContactoEliminado [0];
     } else {
-        console.log("El contacto " + contacto + " no existe en la lista.")
+        return null
     }
 }
 
-QuitarContacto("Jose Uriel", ListaDeContactos)
+// Ejemplo de uso
+AgregarContacto(1, "Laura", "Sanchez", 1234567890, "Bogota, Kennedy")
+AgregarContacto(2, "Tomas", "Ricaurte", 9876543210, "Bogota, Fontibon")
 
-QuitarContacto("David Gonzales", ListaDeContactos)
+let ContactoEliminado = QuitarContacto(1)
 
 console.log(ListaDeContactos)
-
