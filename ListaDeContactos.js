@@ -1,6 +1,13 @@
 // Objeto Lista de contactos
 
-let ListaDeContactos = [];
+let ListaDeContactos = [ {
+    id: 3,
+    nombres: "Juanito",
+    apellidos: "alcachofa",
+    telefono: 3216540879,
+    ubicacion: "Bogotá, bosa"
+}
+];
 
 // Funcion para agregar un elemento a la lista
 
