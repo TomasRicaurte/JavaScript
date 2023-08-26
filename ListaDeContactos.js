@@ -60,7 +60,7 @@ function actualizarContacto(id, nuevosDatos) {
 AgregarContacto(3, "Laura", "Sanchez", 1234567890, {ciudad:"Bogota, Kennedy", direccion:"cl 26 sur #70h"})
 AgregarContacto(4, "Tomas", "Ricaurte", 9876543210, {Ciudad:"Bogota, Fontibon", direccion:"cl 25c #85b"})
 
-let ContactoEliminado = QuitarContacto("cl 26 sur #70h")
+let ContactoEliminado = QuitarContacto()
 
 actualizarContacto(2, {telefono: 6789054321})
 
